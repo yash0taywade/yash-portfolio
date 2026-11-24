@@ -15,7 +15,8 @@ const github = import.meta.env.VITE_GITHUB_URL || 'https://github.com/yash0taywa
 const linkedin = import.meta.env.VITE_LINKEDIN_URL || 'https://www.linkedin.com/in/yash-taywade-155550387/'
 const leetcode = import.meta.env.VITE_LEETCODE_URL || 'https://leetcode.com/u/yash_taywade/'
 const email = `mailto:${import.meta.env.VITE_EMAIL || 'yashtaywade83757@gmail.com'}`
-const portraitUrl = import.meta.env.VITE_PORTRAIT_URL || '/yash-hero-profile.png'
+const portraitUrl = import.meta.env.VITE_PORTRAIT_URL || `${import.meta.env.BASE_URL}yash-hero-profile.png`
+const resumeUrl = `${import.meta.env.BASE_URL}YASH__TAYWADE%20.pdf`
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -125,7 +126,7 @@ function App() {
 
               <div className="mt-9 flex flex-wrap gap-3">
                 <a href="#projects" className="primary-btn">View My Work <ArrowUpRight size={17} /></a>
-                <a href="/YASH__TAYWADE%20.pdf" download className="secondary-btn"><Download size={16} /> Download Resume</a>
+                <a href={resumeUrl} download className="secondary-btn"><Download size={16} /> Download Resume</a>
               </div>
 
               <div className="mt-9 flex items-center gap-5 text-white/45">

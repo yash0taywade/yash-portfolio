@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowDownToLine, ArrowUpRight, Award, BriefcaseBusiness, ChevronDown, Code2, FolderKanban, GraduationCap } from 'lucide-react'
 
+const publicAsset = filename => `${import.meta.env.BASE_URL}${filename}`
+
 const achievements = [
   {
     number: '08',
@@ -35,7 +37,7 @@ const certifications = [
     issuer: 'NPTEL · IIT Madras',
     year: '2024',
     detail: 'Certificate provided by Yash Taywade.',
-    certificate: '/certificates/python-for-data-science-nptel.pdf',
+    certificate: publicAsset('certificates/python-for-data-science-nptel.pdf'),
   },
   {
     title: 'Power BI',
@@ -48,7 +50,7 @@ const certifications = [
     issuer: 'NPTEL · IIT Madras',
     year: '2026',
     detail: 'Certificate provided by Yash Taywade.',
-    certificate: '/certificates/introduction-to-machine-learning-nptel.pdf',
+    certificate: publicAsset('certificates/introduction-to-machine-learning-nptel.pdf'),
   },
   {
     title: 'Programming in Python',
@@ -56,7 +58,7 @@ const certifications = [
     year: '2026',
     score: '93 / 100',
     detail: 'Certificate provided by Yash Taywade.',
-    certificate: '/certificates/programming-in-python-nta.pdf',
+    certificate: publicAsset('certificates/programming-in-python-nta.pdf'),
   },
 ]
 
